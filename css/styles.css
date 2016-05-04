@@ -1,0 +1,29 @@
+header.jumbotron{
+    text-align: center;
+}
+
+header.jumbotron h1{
+    font-size: 3em;
+}
+
+.links{
+    text-align: center;
+}
+
+.icon-lg{
+    font-size: 10em;
+    line-height: 0;
+}
+
+.icon-lg-fi{
+    font-size: 9.5em;
+    line-height: 0;
+}
+
+.icon_target{
+    font-size: 2em;
+}
+
+.between_row{
+    margin-bottom: 50px;
+}
