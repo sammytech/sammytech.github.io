@@ -1,3 +1,6 @@
+body{
+  font-family: 'Inknut Antiqua', serif;
+}
 /*===============*/
 /*    NAVBAR     */
 /*===============*/
@@ -18,6 +21,7 @@
     line-height: 70px;
     text-align: center;
     vertical-align: middle;
+    color: #fafafa;
 }
 
 #terminal{
@@ -30,37 +34,110 @@
 
 /*Main nav*/
 .navbar{
-  height: 110px;
+  /*height: 110px;*/
+  min-height: 13vh;
+  text-align: center;
+  /*opacity: 0.5;*/
+}
+
+.navbar-custom{
+  /*background: #355BA4;*/
+  background: #616B88;
+
+}
+
+.navbar-custom li a{
+  color: #f4f6fb;
+  line-height: 80px;
+  border-width: 2px;
+  border-color: green;
+}
+.navbar-brand, .navbar-nav>li>a{
+  text-shadow: none;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+  background: transparent;
+}
+.navbar-text{
+  font-size: 15px;
+  text-align: center;
+  line-height: 80px;
+  text-transform: uppercase;
+  display:inline-block;
+    float:none;
 }
 
 
+/*===============*/
+/*  HOME SECTION */
+/*===============*/
 
-header.jumbotron{
+#home{
+
+    margin-top: 110px;
     text-align: center;
+    min-height: 87vh;
+    background: #33447A;
+    color: #f4f6fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header.jumbotron h1{
-    font-size: 3em;
+#home  h1{
+  font-family: 'Baloo', cursive;
+    font-size: 5em;
+    text-transform: uppercase;
 }
 
-.links{
+#home > content {
+  font-weight: bold;
+}
+
+#home h3{
+  font-family: 'Lobster', cursive;
+  /*font-family: 'Inknut Antiqua', serif;*/
+  /*font-family: 'Bree Serif', serif;*/
+}
+
+
+
+
+#links{
     text-align: center;
+    font-size: 4em;
+    vertical-align: baseline;
+    color: black;
+
 }
 
-.icon-lg{
-    font-size: 10em;
-    line-height: 0;
+#links a{
+  color: black;
 }
 
-.icon-lg-fi{
-    font-size: 9.5em;
-    line-height: 0;
+#links img{
+  height: 56px;
 }
 
-.icon_target{
-    font-size: 2em;
+/*====================*/
+/*  PORTFOLIO SECTION */
+/*====================*/
+
+#portfolio{
+    padding: 40px 80px;
 }
 
-.between_row{
-    margin-bottom: 50px;
+#portfolio .project{
+  padding: 20px 20px;
+}
+
+#portfolio .project > img{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+}
+
+#portfolio .project > .description{
+  width: 60%;
+  display: inline-block;
 }
