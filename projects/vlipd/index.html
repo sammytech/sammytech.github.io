@@ -66,97 +66,85 @@
     </div>
     <div class="overlay"></div>
   </header>
-  <div class="goals">
-    <h3>Goals</h3>
-    <div class="section-content">
-      <ul>
-        <li>To work in a group that consists of foreign(French) students</li>
-        <li>To work with JavaFX</li>
-        <li>To work with a database(MySQL)</li>
-        <li>To consider internalization while building a software</li>
-      </ul>
+  <div class="container">
+    <div class="goals">
+      <h3>Goals</h3>
+      <div class="section-content">
+        <ul>
+          <li>To allow users to share recorded videos</li>
+          <li>To allow users to collaborate on shared videos.</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="overview">
-    <h3>Overview</h3>
-    <div class="section-content">
+    <div class="requirements">
+      <h3>Requirements</h3>
+      <div class="section-content">
+        <ol>
+          <li>
+            Register users using their emails
+          </li>
+          <li>
+            Login users using their emails and password
+          </li>
+          <li>
+            Record videos
+          </li>
+          <li>
+            Switch between front and back camera for recording
 
-    </div>
-  </div>
-  <div class="requirements">
-    <h3>Requirements</h3>
-    <div class="section-content">
-      <ol>
-        <li>
-          Add a book to the system (Note: each book will have a barcode label pre-assigned –
-          i.e., “stuck on” – to it. This will be a 5-digit barcode, with the first two digits indicating
-          book type – e.g., “20” will be an English book, “30” a Math book, and so on).
-        </li>
-        <li>
-          Modify information about a book in the system
-        </li>
-        <li>
-          Delete a book from the system
-        </li>
-        <li>
-          Add a student borrower to the system
-        </li>
-        <li>
-          Modify information about a student borrower in the system (NOTE: Only “Administrator”
-          workers can mark a student borrower as “delinquent”, or remove the “delinquency” mark)
-        </li>
-        <li>
-          Delete a student borrower from the system
-        </li>
-        <li>
-          Add a worker to the system (this functionality should include the feature to set the worker’s
-          credentials – “Ordinary” or “Administrator”)
+          </li>
+          <li>
+            List of people that a video is being shared with
+          </li>
+          <li>
+            Pick a maximum of 5 users that user wants to share video with
 
-        </li>
-        <li>
-          Modify information about a worker in the system (this should allow the credentials to be changed
-          – from “Administrator” to “Ordinary” and vice versa)
-        </li>
-        <li>
-            Delete a worker from the system
-        </li>
-        <li>
-            Check out (i.e, rent out) a book
-        </li>
-        <li>
-          Check in (i.e., return) a book
-        </li>
-        <li>
-          Run delinquency check – this will go over all books that are currently “late” and mark their associated
-          borrower’s account as “delinquent”
-        </li>
-        <li>
-          List all books that are currently checked out
-        </li>
-        <li>
-          List all books that are currently available for check out
-        </li>
-        <li>
-          List all student borrowers who have books checked out
-        </li>
-      </ol>
+          </li>
+
+        </ol>
+      </div>
     </div>
-  </div>
-  <div class="design">
-    <h3>Design</h3>
-    <div class="section-content">
-        <div class="thumbnail">
-          <img src="/img/library_main.png"/>
-          <div class="caption">
-            Library Main View
+    <div class="design">
+      <h3>Design</h3>
+      <div class="section-content">
+          <div class="thumbnail">
+            <img src="/img/library_main.png"/>
+            <div class="caption">
+              Library Main View
+            </div>
           </div>
-        </div>
+      </div>
     </div>
-  </div>
-  <div class="development">
-    <h3>Development</h3>
-    <div class="section-content">
+    <div class="development">
+      <h3>Development</h3>
+      <div class="section-content">
+        <ul class="no-bullet">
+          <li>
+            <p>
+              This project was made with no budget; therefore, we took advantages of the free platforms which made
+              us focus on the development of the application. This application was made for iOS only and we were able to
+              demonstrate it at Imagine RIT.
+            </p>
+          </li>
+        <li><h4><i>Technologies</i></h4></li>
+          <ul>
+            <li>
+              <strong>Swift </strong> –  This is an MBaaS which allowed us as a team to worry less about the backend functionality
+              of the application.
 
+            </li>
+            <li>
+              <strong>Parse </strong>  –  This is an MBaaS which allowed us as a team to worry less about the backend functionality
+              of the application.
+            </li>
+          </ul>
+          <!-- End of technology list -->
+          <li>All user interfaces were coded instead of using the interface builder because I felt I had more control on what
+            happens and what is being displayed in the app.
+          </li>
+        </ul>
+        <!-- End of development list -->
+      </div>
     </div>
   </div>
 

@@ -61,102 +61,138 @@
           EVOLUTION RADIO
         </h1>
         <h4>
-          Firebase, Backendless, Java, AndroidSDK, Swift
+          Firebase, Backendless, Java, AndroidSDK, Swift, PHP, HTML5, CSS3
         </h4>
     </div>
     <div class="overlay"></div>
   </header>
-  <div class="goals">
-    <h3>Goals</h3>
-    <div class="section-content">
-      <ul>
-        <li>To work in a group that consists of foreign(French) students</li>
-        <li>To work with JavaFX</li>
-        <li>To work with a database(MySQL)</li>
-        <li>To consider internalization while building a software</li>
-      </ul>
+  <div class="container">
+    <div class="goals">
+      <h3>Goals</h3>
+      <div class="section-content">
+        <ul>
+          <li>To allow users to listen to the radio station</li>
+          <li>To enable users to contribute through a comment section</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="overview">
-    <h3>Overview</h3>
-    <div class="section-content">
+    <div class="requirements">
+      <h3>Requirements</h3>
+      <div class="section-content">
+        <ol>
+          <li>
+            Register users with email
+          </li>
+          <li>
+            Register users with their Facebook account
+          </li>
+          <li>
+            Login users with their email and password
 
-    </div>
-  </div>
-  <div class="requirements">
-    <h3>Requirements</h3>
-    <div class="section-content">
-      <ol>
-        <li>
-          Add a book to the system (Note: each book will have a barcode label pre-assigned –
-          i.e., “stuck on” – to it. This will be a 5-digit barcode, with the first two digits indicating
-          book type – e.g., “20” will be an English book, “30” a Math book, and so on).
-        </li>
-        <li>
-          Modify information about a book in the system
-        </li>
-        <li>
-          Delete a book from the system
-        </li>
-        <li>
-          Add a student borrower to the system
-        </li>
-        <li>
-          Modify information about a student borrower in the system (NOTE: Only “Administrator”
-          workers can mark a student borrower as “delinquent”, or remove the “delinquency” mark)
-        </li>
-        <li>
-          Delete a student borrower from the system
-        </li>
-        <li>
-          Add a worker to the system (this functionality should include the feature to set the worker’s
-          credentials – “Ordinary” or “Administrator”)
+          </li>
+          <li>
+            Login users with their Facebook account
 
-        </li>
-        <li>
-          Modify information about a worker in the system (this should allow the credentials to be changed
-          – from “Administrator” to “Ordinary” and vice versa)
-        </li>
-        <li>
-            Delete a worker from the system
-        </li>
-        <li>
-            Check out (i.e, rent out) a book
-        </li>
-        <li>
-          Check in (i.e., return) a book
-        </li>
-        <li>
-          Run delinquency check – this will go over all books that are currently “late” and mark their associated
-          borrower’s account as “delinquent”
-        </li>
-        <li>
-          List all books that are currently checked out
-        </li>
-        <li>
-          List all books that are currently available for check out
-        </li>
-        <li>
-          List all student borrowers who have books checked out
-        </li>
-      </ol>
+          </li>
+          <li>
+            Modify information about a student borrower in the system (NOTE: Only “Administrator”
+            workers can mark a student borrower as “delinquent”, or remove the “delinquency” mark)
+          </li>
+          <li>
+            Play internet radio station
+
+          </li>
+          <li>
+            Live updates of a comment section
+
+          </li>
+          <li>
+            Users reply to other users.
+
+          </li>
+          <li>
+              Change of in-app artwork to reflect radio station current program.
+
+          </li>
+          <li>
+              Notify users when certain radio station programs start.
+          </li>
+          <li>
+            Notify users when another user replies to their comment.
+          </li>
+
+        </ol>
+      </div>
     </div>
-  </div>
-  <div class="design">
-    <h3>Design</h3>
-    <div class="section-content">
-        <div class="thumbnail">
-          <img src="/img/library_main.png"/>
-          <div class="caption">
-            Library Main View
+    <div class="design">
+      <h3>Design</h3>
+      <div class="section-content">
+          <div class="thumbnail">
+            <img src="/img/library_main.png"/>
+            <div class="caption">
+              Library Main View
+            </div>
           </div>
-        </div>
+      </div>
     </div>
-  </div>
-  <div class="development">
-    <h3>Development</h3>
-    <div class="section-content">
+    <div class="development">
+      <h3>Development</h3>
+      <div class="section-content">
+        <ul class="no-bullet">
+          <li>
+            <p>
+              Due to this app being made as a prototype for the start-up radio station, free subscription
+              to some of the technologies were used. Third-party solutions were also used to reduce cost of
+              making the mobile application.
+            </p>
+          </li>
+        <li><h4><i>Technologies</i></h4></li>
+          <ul>
+            <li>
+              <strong>Firebase </strong> –  This platform was used for creating the live comment section in the
+              app because it is a real-time database and it allows for syncing data between multiple device easy.
+            </li>
+            <li>
+              <strong>Backendless </strong>  –  This MBaaS was used because Parse was being shut down. It was used
+              for push notifications to users.
+            </li>
+            <li>
+              <strong>Android SDK / Java</strong> –  This is the language and software development kit necessary for
+              creating android application
+            </li>
+            <li>
+              <strong>Swift </strong> – This is the language used for creating the iOS version of the application.
+            </li>
+            <li>
+              <strong>PHP  </strong> – This was the language used to create the backend of the web application
+              which allowed administrators to manually push notifications and change artworks in the app.
 
+            </li>
+            <li>
+              <strong>HTML5  </strong> – This was the language used to create the backend of the web application
+              which allowed administrators to manually push notifications and change artworks in the app.
+
+            </li>
+            <li>
+              <strong>CSS3  </strong> – This was used to style the user interface of the web application
+            </li>
+          </ul>
+          <!-- End of technology list -->
+          
+          <li>
+
+              <i>iOS</i> - All user interfaces were coded instead of using the interface builder because I felt I had more
+              control on what happens and what is being displayed in the app.
+
+          </li>
+          <li>
+
+              <i>Android</i> - All user interfaces were coded using the XML.
+
+          </li>
+        </ul>
+        <!-- End of development list -->
+      </div>
     </div>
   </div>
 

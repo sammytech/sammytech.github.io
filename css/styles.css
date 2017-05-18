@@ -2,10 +2,15 @@ body{
   /*font-family: 'Inknut Antiqua', serif;*/
       font-family: 'Karla', sans-serif;
 }
+p, #project {
+  font-size: 1.6rem;
+}
+
 .navbar-custom, .sub-section{
   font-family: 'Inknut Antiqua', serif;
 }
-
+tab1 { padding-left: 2em; }
+tab2{ padding-left: 4em; }
 /*===============*/
 /*    NAVBAR     */
 /*===============*/
@@ -194,6 +199,13 @@ body{
   background: rgba(0,0,0,.6);
 }
 
+#project .no-bullet{
+  list-style: none;
+}
+
+#project h4{
+  font-size: 2.3rem;
+}
 /*==================*/
 /*  LIBRARY PAGE    */
 /*==================*/

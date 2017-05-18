@@ -65,97 +65,117 @@
     </div>
     <div class="overlay"></div>
   </header>
-  <div class="goals">
-    <h3>Goals</h3>
-    <div class="section-content">
-      <ul>
-        <li>To work in a group that consists of foreign(French) students</li>
-        <li>To work with JavaFX</li>
-        <li>To work with a database(MySQL)</li>
-        <li>To consider internalization while building a software</li>
-      </ul>
+  <div class="container">
+    <div class="goals">
+      <h3>Goals</h3>
+      <div class="section-content">
+        <ul>
+          <li>Students be aware of events on campus</li>
+          <li>Students knows which of their friends are attending events</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="overview">
-    <h3>Overview</h3>
-    <div class="section-content">
+    <div class="requirements">
+      <h3>Requirements for API and Mobile Application</h3>
+      <div class="section-content">
+        <ol>
+          <li>
+            Authentication
+          </li>
+          <li>
+            Register users
 
-    </div>
-  </div>
-  <div class="requirements">
-    <h3>Requirements</h3>
-    <div class="section-content">
-      <ol>
-        <li>
-          Add a book to the system (Note: each book will have a barcode label pre-assigned –
-          i.e., “stuck on” – to it. This will be a 5-digit barcode, with the first two digits indicating
-          book type – e.g., “20” will be an English book, “30” a Math book, and so on).
-        </li>
-        <li>
-          Modify information about a book in the system
-        </li>
-        <li>
-          Delete a book from the system
-        </li>
-        <li>
-          Add a student borrower to the system
-        </li>
-        <li>
-          Modify information about a student borrower in the system (NOTE: Only “Administrator”
-          workers can mark a student borrower as “delinquent”, or remove the “delinquency” mark)
-        </li>
-        <li>
-          Delete a student borrower from the system
-        </li>
-        <li>
-          Add a worker to the system (this functionality should include the feature to set the worker’s
-          credentials – “Ordinary” or “Administrator”)
+          </li>
+          <li>
+            Confirm users email
 
-        </li>
-        <li>
-          Modify information about a worker in the system (this should allow the credentials to be changed
-          – from “Administrator” to “Ordinary” and vice versa)
-        </li>
-        <li>
-            Delete a worker from the system
-        </li>
-        <li>
-            Check out (i.e, rent out) a book
-        </li>
-        <li>
-          Check in (i.e., return) a book
-        </li>
-        <li>
-          Run delinquency check – this will go over all books that are currently “late” and mark their associated
-          borrower’s account as “delinquent”
-        </li>
-        <li>
-          List all books that are currently checked out
-        </li>
-        <li>
-          List all books that are currently available for check out
-        </li>
-        <li>
-          List all student borrowers who have books checked out
-        </li>
-      </ol>
+          </li>
+          <li>
+            Attend events
+
+          </li>
+          <li>
+            Un-attend events
+          </li>
+          <li>
+            Get trending events
+
+          </li>
+          <li>
+            Retrieve events based on genre id
+
+          </li>
+          <li>
+            Retrieve detailed event information including followings
+            that are attending the event
+          </li>
+          <li>
+              Retrieve followers
+          </li>
+          <li>
+              Retrieve followings
+
+          </li>
+          <li>
+            Add followings
+          </li>
+          <li>
+            Delete followings
+          </li>
+          <li>
+            Confirm followers
+          </li>
+          <li>
+            Decline followers
+          </li>
+
+        </ol>
+      </div>
     </div>
-  </div>
-  <div class="design">
-    <h3>Design</h3>
-    <div class="section-content">
-        <div class="thumbnail">
-          <img src="/img/library_main.png"/>
-          <div class="caption">
-            Library Main View
+    <div class="design">
+      <h3>Design</h3>
+      <div class="section-content">
+          <div class="thumbnail">
+            <img src="/img/library_main.png"/>
+            <div class="caption">
+              Library Main View
+            </div>
           </div>
-        </div>
+      </div>
     </div>
-  </div>
-  <div class="development">
-    <h3>Development</h3>
-    <div class="section-content">
+    <div class="development">
+      <h3>Development</h3>
+      <div class="section-content">
+        <ul class="no-bullet">
+          <li>
+            <p>
+              During the testing phases of this app, a web scrapper was developed in node.js to
+              get all the events on the campus from the school's website and store them
+              in our database.
+            </p>
+          </li>
+        <li><h4><i>Technologies</i></h4></li>
+          <ul>
+            <li>
+              <strong>AWS EC2 </strong> –  This is the web service we used to host our API.
+            </li>
+            <li>
+              <strong>Node.js </strong>  –  Used to build our API on because of its asynchronous I/O and its
+              ability with the real-time applications.
+            </li>
+            <li>
+              <strong>Android SDK / Java</strong> –  This is the language and software development kit necessary for
+              creating android application
+            </li>
+            <li>
+              <strong>DynamoDB</strong> –  This is a NoSQL database used to store all our data.
+            </li>
+          </ul>
+          <!-- End of technology list -->
 
+        </ul>
+        <!-- End of development list -->
+      </div>
     </div>
   </div>
 
