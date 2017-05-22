@@ -11,31 +11,57 @@ p, #project {
 }
 tab1 { padding-left: 2em; }
 tab2{ padding-left: 4em; }
+.noscroll{
+  overflow: hidden;
+}
 /*===============*/
 /*    NAVBAR     */
 /*===============*/
 /*Brand*/
 .blink_me {
-  animation: blinker 1.7s linear infinite;
+  animation: blinker 1s infinite step-start;
+  visibility: hidden;
+}
+
+section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #f4f6fb;
+}
+
+.sub-section{
+  margin-bottom: 50px;
+  font-size: 3em;
+  text-align: center;
 }
 
 @keyframes blinker {
-  50% { opacity: 0; }
+  50% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
 }
-
+#shell, #interactive-shell{
+  background: #383737;
+  color: #fafafa;
+}
 #shell{
-    background: #383737;
+
     /*padding: 10px;*/
     width: 90px;
     height: 70px;
     line-height: 70px;
     text-align: center;
     vertical-align: middle;
-    color: #fafafa;
+
 }
 
-#terminal{
+#terminal, #interactive-terminal{
   background: #ccc;
+}
+#terminal{
   padding-top: 10px;
   border-radius: 5px;
   box-shadow: 5px 5px 5px #888888
@@ -53,6 +79,8 @@ tab2{ padding-left: 4em; }
 .navbar-custom{
   /*background: #355BA4;*/
   background: #616B88;
+
+  z-index: 900;
 
 }
 
@@ -133,32 +161,43 @@ tab2{ padding-left: 4em; }
 /*====================*/
 
 #portfolio{
-    padding: 40px 80px;
+    /*padding: 40px 80px;*/
+    /*background-color: #48337C;*/
+    /*background-color: #B48F3E;*/
+    background-color: #957F6D;
+    color: #f4f6fb;
 }
 
 #portfolio .project{
-  padding: 20px 20px;
+  /*padding: 20px 20px;*/
 }
 
-#portfolio .project > img{
+#portfolio .project .img-container img{
+  height: 300px;
+  display: block;
+  margin: auto;
+}
+
+.coming img{
+  width: 300px;
+  height: 0;
+}
+
+#portfolio .project .img-container {
   width: 300px;
   height: 300px;
   display: inline-block;
   margin-right: 30px;
 }
 
-#portfolio .project > .description{
-  width: 60%;
-  display: inline-block;
-}
 
-#portfolio .detail{
+/*#portfolio .detail{
   display: flex;
   align-self: flex-end;
   align-items: flex-end;
   text-decoration: none;
 
-}
+}*/
 #portfolio a{
   text-decoration: none;
   border-bottom: 1px dashed #000;
@@ -206,6 +245,11 @@ tab2{ padding-left: 4em; }
 #project h4{
   font-size: 2.3rem;
 }
+
+
+#about{
+  background-color: #28646F;
+}
 /*==================*/
 /*  LIBRARY PAGE    */
 /*==================*/
@@ -214,4 +258,87 @@ tab2{ padding-left: 4em; }
 }
 .thumbnail{
   width: 350px
+}
+
+
+
+/*========================*/
+/*  INTERACTIVE TERMINAL  */
+/*========================*/
+#terminal-overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#terminal-overlay.active{
+  visibility: visible;
+}
+
+#terminal-overlay.inactive{
+  visibility: hidden;
+}
+
+#interactive-terminal{
+    border-radius: 10px 10px 0px 0px;
+    width: 50vw;
+    margin: auto;
+    top:50%;
+    margin-top: -40vh;
+    position: relative;
+    padding-top: 5px;
+}
+
+#close-terminal{
+  background-color: #EA3C00;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 15px;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  /*margin-top: 20px;*/
+
+  /*margin: 20px 5px;*/
+}
+#close-terminal #x{
+  visibility: hidden;
+  cursor: pointer;
+  color: #000;
+}
+
+.active #close-terminal:hover #x{
+  visibility: visible;
+}
+
+#cursor{
+  background-color: white;
+
+  /*border-width: 20px;*/
+  background-clip: content-box;
+  border-color: white;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  visibility: hidden;
+}
+#interactive-terminal:focus{
+  outline: none;
+}
+
+#interactive-terminal:focus .cmd_active #cursor{
+  animation: blinker 1s infinite step-start;
+}
+
+#interactive-shell{
+  width: inherit;
+  padding: 10px;
+  height: 80vh;
+  overflow-y: auto;
 }

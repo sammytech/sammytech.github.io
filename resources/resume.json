@@ -1,0 +1,25 @@
+{
+  "name"        : "Oluwatobi Samuel Babalola",
+  "address"     : "10 Greenwood Street",
+  "title"       : "Software Developer",
+  "github"      : "https://github.com/sammytech",
+  "website"     : "https://sammytech.github.io/",
+  "goal"        : "",
+  "experience"  : [
+                    { "company"   :"",
+                      "address"   :"",
+                      "title":"",
+                      "descripton":"",
+                      "year_from":"",
+                      "year_to":""
+                    }
+                  ],
+  "education":[
+    {"":""}
+  ],
+  "skills":[
+    {"proficient":""},
+    {"familiar":""},
+
+  ]
+}
