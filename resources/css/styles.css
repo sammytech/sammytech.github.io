@@ -217,18 +217,20 @@ section{
   position: relative;
   align-items: center;
   align-self: center;
-  background: url("/img/library_code.png");
   color: #fafafa;
 }
 
+
+
 #project .navbar-custom{
-  background: transparent;
+  /*background: transparent;*/
+  z-index: 999;
 }
 #project .brief .content{
   padding-top: 120px;
   text-align: center;
   width: 100%;
-  z-index: 999;
+  z-index: 900;
 }
 
 #project .overlay{
@@ -260,6 +262,17 @@ section{
   width: 350px
 }
 
+.library-header{
+    background: url("/resources/img/library_code.png");
+}
+
+/*==================*/
+/*  RADIOEVO PAGE   */
+/*==================*/
+
+.radioevo-header{
+    background: url("/resources/img/radioevo_code.png");
+}
 
 
 /*========================*/

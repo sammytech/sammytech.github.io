@@ -1,5 +1,14 @@
 $(document).ready(function() {
   var cmd = "";
+  var resume = {};
+  $(function(){
+      $.getJSON('resources/js/resume.json',function(data){
+          console.log('success');
+          resume = data;
+      }).error(function(jqXHR, textStatus, errorThrown){
+          console.log('error');
+      });
+    });
   // Display terminal
   $('.navbar-brand').click(function(){
     $('#terminal-overlay').removeClass('inactive');
@@ -17,13 +26,15 @@ $(document).ready(function() {
 // Detect character press
   $('#interactive-terminal').keypress(function(event){
     var keycode = event.keyCode;
-    cmd += String.fromCharCode(keycode);
 
-    var cur = $('.cmd_active #cmd-text').html();
-    if(keycode == 32){
-      $('.cmd_active #cmd-text').html(cur + '&nbsp;');
-    } else {
-      $('.cmd_active #cmd-text').html(cur + String.fromCharCode(keycode));
+    if(keycode != 13 && keycode != 0 && keycode != 8 && keycode != 9 ){
+      cmd += String.fromCharCode(keycode);
+      var cur = $('.cmd_active #cmd-text').html();
+      if(keycode == 32){
+        $('.cmd_active #cmd-text').html(cur + '&nbsp;');
+      } else {
+        $('.cmd_active #cmd-text').html(cur + String.fromCharCode(keycode));
+      }
     }
 
   });
@@ -69,10 +80,35 @@ $(document).ready(function() {
       '<span id="cursor">&nbsp;</span>' +
     '</div>');
     $("#interactive-shell").animate({ scrollTop: $("#interactive-shell")[0].scrollHeight}, 1);
+    cmd = '';
   }
 
   function processPrompt(){
+    var result = '';
+    var success = true;
+    if(cmd.toLowerCase() == "name"){
+        result = resume.name;
+    } else if(cmd.toLowerCase() == "address"){
+        result = resume.address;
+    } else if(cmd.toLowerCase() == "title" || cmd.toLowerCase() == "profession"){
+        result = resume.title;
+    } else if(cmd.toLowerCase() == "links"){
+        result =  "<a href='"+resume.website+"'> Personal Website </a>, " +
+                  "<a href='"+resume.github+"'> Github </a>";
+    } else if(cmd.toLowerCase() == "education"){
+        result =  resume.education;
+    }
 
+    else{
+      success = false;
+      result = "Command not found or Feature still under construction";
+    }
+    if(success){
+      $('.cmd_active').append("<div class='result result-success'>" +result+"</div>");
+    } else{
+      $('.cmd_active').append("<div class='result result-error'>" +result+"</div>");
+    }
+    newPrompt();
   }
 
 
